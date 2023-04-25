@@ -8,7 +8,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class BaseScreen {
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.*;
+
+public class BaseScreen extends ExtentReport {
     protected AndroidDriver<MobileElement> driver;
     protected WebDriverWait                wait;
     protected MobileActions                mobileActions;
@@ -25,6 +28,11 @@ public class BaseScreen {
 
         // cap.setCapability("appPackage", "com.example.travel_app_ytb");
         // cap.setCapability("appActivity", "com.example.travel_app_ytb.MainActivity");
+
+        //report
+        extent = new ExtentReports();
+        spark = new ExtentSparkReporter("AppiumTest.html");
+        extent.attachReporter(spark);        
 
         URL url;
         try {
