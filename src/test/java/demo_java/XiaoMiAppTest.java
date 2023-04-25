@@ -88,6 +88,8 @@ public class XiaoMiAppTest extends BaseScreen {
           }
       }
 
+      extentTest.log(Status.INFO, "Login Test ended");
+
       myWriter.close();
       driver.launchApp();
     }
@@ -200,6 +202,7 @@ public class XiaoMiAppTest extends BaseScreen {
       el12.click();
       Thread.sleep(800);
       
+      extentTest.log(Status.INFO, "Test Practice Feature ended");
 
       myWriter.close();
       extent.flush();
