@@ -19,13 +19,14 @@ public class MainTest
         test_obj.accountTest.put("theanh090602@gmail.com", "anhtran96");
 
         //login test
-        // test_obj.test_login();
+        test_obj.test_login();
 
         test_obj.accountTest.clear();
         
         test_obj.accountTest.put("theanh090602@gmail.com", "anhtran96");
 
-        //a feature test
-        test_obj.a_feature_test();
+        //practice feature test
+        int timeRunTest = 5; //test 5s
+        test_obj.practice_feature_test(timeRunTest);
     }
 }
