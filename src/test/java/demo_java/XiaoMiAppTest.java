@@ -58,7 +58,7 @@ public class XiaoMiAppTest extends BaseScreen {
           //press Login button
           MobileElement loginButton = (MobileElement) driver.findElementById("com.xiaomi.hm.health:id/tv_login");
           loginButton.click();
-          Thread.sleep(1800);
+          Thread.sleep(2000);
           
           MobileElement check_login = null;
 
@@ -80,7 +80,7 @@ public class XiaoMiAppTest extends BaseScreen {
               try {
                   myWriter.write("Account with email " + entry.getKey() + " and password " + entry.getValue() + " is true account" + "\n");
                   extentTest.log(Status.INFO, "Account with email " + entry.getKey() + " and password " + entry.getValue() + " is true account");
-                  Thread.sleep(8000);
+                  Thread.sleep(1000);
                 } catch (IOException e) {
                   System.out.println("An error occurred3.");
                   e.printStackTrace();
